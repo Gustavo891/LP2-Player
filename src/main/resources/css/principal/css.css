@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&family=Roboto:ital,wght@0,400;0,500;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap');
+
+
+.MenuEsquerda {
+    -fx-background-color: #ffffff;
+    /*-fx-background-radius: 15px;
+    -fx-border-radius: 20px;*/
+}
+.background {
+    -fx-background-color: lightgray;
+}
+
+.Stack1 {
+    -fx-border-radius: 0px 0px 30px 30px;
+    -fx-border-color: #cecdcd;
+    -fx-background-radius: 0px 0px 30px 30px;
+    -fx-background-color: rgb(255, 255, 255);
+}
+
+.botaoPlay {
+    -fx-color: black;
+}
+
+.botaoPause {
+
+}
+.icones:hover {
+    -fx-cursor: hand;
+}
+.painel2 {
+    -fx-background-color: white;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: white;
+}
+
+.list-cell:even { /* <=== changed to even */
+    -fx-background-color: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: white;
+}

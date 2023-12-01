@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.player.ControlMain.CriadorPlaylist">
+    <children>
+        <VBox alignment="CENTER" prefHeight="150.0" prefWidth="300.0" spacing="10.0">
+            <Label text="Digite o nome da playlist:" />
+            <TextField fx:id="playlistNameTextField" />
+            <Button text="Criar" onAction="#createPlaylist" />
+        </VBox>
+    </children>
+</AnchorPane>

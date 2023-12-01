@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+.botaoCriada {
+    -fx-background-radius: 30px;
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #099bf8 0.0%, #dd90f6 100.0%);
+    -fx-text-fill: white;
+    -fx-font: 20px 'Roboto', sans-serif;
+    -fx-font-weight: 900;
+}
+
+.criada {
+    -fx-font: 14px 'Open Sans', sans-serif;
+    -fx-font-weight: 700;
+    -fx-text-fill: #252525;
+}
+.criada2 {
+    -fx-font: 14px 'Open Sans', sans-serif;
+    -fx-font-weight: 500;
+    -fx-text-fill: #4b4b4b;
+}
+
+.termos .box{
+    -fx-font: 12px 'Open Sans', sans-serif;
+    -fx-background-color: #f0f5f4;
+    -fx-background-radius: 15px; /* arredonda o fundo */
+    -fx-border-radius: 15px; /* arredonda a borda */
+    -fx-border-color: #545454;
+    -fx-border-width: 1; /* largura da borda */
+    -fx-height: 10px;
+    -fx-width: 10px;
+}
+
+.borda-vermelha {
+    -fx-border-color: #de2237;
+}
+.box-vermelha .box {
+    -fx-background-color: #bd5670;
+    -fx-border-color: #de2237;
+}
+
+.termos:selected .box {
+    -fx-background-color: #2ba417;
+}
+
+.caixa1 {
+    -fx-background-color: #0f73d7;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 4, 4);
+}
+.caixa2 {
+    -fx-background-color: #459bf3;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 4, 4);
+}
+
+.preco2 {
+    -fx-font: 33px 'Open Sans', sans-serif;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 6, 0, 2, 2);
+    -fx-font-weight: 700;
+}
+.preco1 {
+    -fx-font: 20px 'Open Sans', sans-serif;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 6, 0, 2, 2);
+    -fx-font-weight: 500;
+}

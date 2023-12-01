@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+.config:hover {
+    -fx-cursor: hand;
+}
+
+.buttonProfile {
+    -fx-background-color: linear-gradient(to right, #099bf8, #dd90f6);
+    -fx-font-family: "Segoe UI";
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #fdfdfd;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0); /* Adiciona sombra */
+}
+
+.buttonProfile:hover {
+    -fx-background-color: linear-gradient(to right, #099bf8, #dd90f6);
+    -fx-cursor: hand;
+}
+
+.botaoVIP {
+    -fx-background-color: linear-gradient(to right, #099bf8, #dd90f6);
+    -fx-font-family: "Segoe UI";
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-background-radius: 30px;
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-fill: #f5f5f5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0); /* Adiciona sombra */
+}
+
+
+.painel {
+    -fx-border-style: hidden solid hidden hidden;
+    -fx-border-width: 1px;
+    -fx-border-color: #727272;
+    -fx-background-color:  #eeeded;
+}
+
+.perfilMenu {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20px;
+}
+
+.nome {
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-weight: 700;
+    -fx-text-fill: rgb(73, 73, 73);
+    -fx-font-size: 30px;
+}
+
+.email {
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-weight: 500;
+    -fx-text-fill: #0374d2;
+    -fx-font-size: 14px;
+}
+
+.principal {
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-weight: 700;
+    -fx-text-fill: rgb(51, 51, 51);
+    -fx-font-size: 22px;
+}
+
+.HomeIcon {
+    -fx-fill: rgb(128, 128, 128);
+}
+.texto {
+    -fx-text-fill: rgb(134, 134, 134);
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-weight: 700;
+    -fx-font-size: 14px;
+}
+.selecionado {
+    -fx-text-fill:rgb(51, 51, 51);
+}
+.barra {
+    -fx-text-fill: transparent;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-weight: 700;
+    -fx-font-size: 18px;
+}
+.home:hover .barra{
+    -fx-text-fill: rgb(44, 44, 44);
+}
+.home:hover {
+    -fx-cursor: hand;
+    -fx-translate-x: 15;
+
+}
+.home:hover .texto {
+    -fx-text-fill: rgb(44, 44, 44);
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-weight: 700;
+    -fx-font-size: 14px;
+}
+
+.perfil {
+    -fx-background-radius: 50%;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 50%;
+    -fx-border-width: 10px;
+    -fx-background-color: lightgray; /* Pode ajustar a cor conforme necessário */
+}

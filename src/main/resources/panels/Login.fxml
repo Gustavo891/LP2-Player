@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="background" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.player.ControlAuth.LoginControl">
+    <children>
+        <Pane fx:id="pnlLogin" layoutX="437.0" layoutY="144.0" prefHeight="455.0" prefWidth="526.0" styleClass="background2">
+            <children>
+                <Label fx:id="erroLogin" layoutX="126.0" layoutY="51.0" text="Digite um nome de usuário e senha." textAlignment="CENTER" textFill="#c31717" visible="false" />
+                <ImageView fx:id="erroLoginIcon" fitHeight="20.0" fitWidth="19.0" layoutX="105.0" layoutY="50.0" visible="false">
+                    <image>
+                        <Image url="@../../../../../Player/src/main/resources/images/icons8-warning-96.png" />
+                    </image>
+                </ImageView>
+                <VBox layoutX="80.0" layoutY="131.0" prefHeight="167.0" prefWidth="378.0">
+                    <children>
+                        <Label styleClass="texto3" stylesheets="@../css/login.css" text="Nome de usuário:" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
+                            <children>
+                                <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
+                                    <children>
+                                        <FontAwesomeIcon glyphName="USER" layoutX="13.0" layoutY="30.0" size="25px" />
+                                    </children>
+                                </Pane>
+                                <TextField fx:id="usuario" focusTraversable="false" prefHeight="45.0" prefWidth="307.0" promptText="Exemplo: BrunoMars" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <Label styleClass="texto3" stylesheets="@../css/login.css" text="Senha de acesso:" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
+                            <children>
+                                <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
+                                    <children>
+                                        <FontAwesomeIcon glyphName="LOCK" layoutX="14.0" layoutY="30.0" size="25px" />
+                                    </children>
+                                </Pane>
+                                <PasswordField fx:id="password" focusTraversable="false" prefHeight="43.0" prefWidth="310.0" promptText="Exemplo: BruninhoFromBrazil" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <MFXButton fx:id="btnAcessar" buttonType="RAISED" layoutX="114.0" layoutY="323.0" onAction="#Login" prefHeight="32.0" prefWidth="311.0" rippleAnimateBackground="false" stylesheets="@../css/login.css" text="Acessar">
+                    <styleClass>
+                        <String fx:value="botaoAcessar" />
+                        <String fx:value="botao" />
+                    </styleClass>
+                </MFXButton>
+                <Label fx:id="goRegister" layoutX="133.0" layoutY="389.0" onMouseClicked="#switchScene" stylesheets="@../css/login.css" text="Não tem uma conta? Registre-se agora!" textFill="#69cdee" underline="true">
+                    <styleClass>
+                        <String fx:value="registre" />
+                        <String fx:value="textohover" />
+                    </styleClass>
+                </Label>
+                <Label layoutX="79.0" layoutY="75.0" prefHeight="56.0" prefWidth="518.0" styleClass="criar" stylesheets="@../css/login.css" text="Bem-vindo de volta!" />
+                <Label layoutX="113.0" layoutY="32.0" prefHeight="56.0" prefWidth="378.0" styleClass="titulo" stylesheets="@../css/login.css" text="MusicFX" />
+                <FontAwesomeIcon glyphName="MUSIC" layoutX="79.0" layoutY="71.0" size="30px">
+                    <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.03529411926865578" green="0.6078431606292725" blue="0.9725490212440491" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.8666666746139526" green="0.5647059082984924" blue="0.9647058844566345" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </fill>
+                </FontAwesomeIcon>
+            </children>
+         <stylesheets>
+            <URL value="@../css/login.css" />
+            <URL value="@../css/login.css" />
+         </stylesheets>
+        </Pane>
+    </children>
+</AnchorPane>

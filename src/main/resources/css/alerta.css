@@ -1,0 +1,13 @@
+.dialog-pane {
+    -fx-graphic: null;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: lightblue;
+    -fx-border-color: blue;
+    -fx-border-width: 0 0 1 0;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-graphic: null;
+}

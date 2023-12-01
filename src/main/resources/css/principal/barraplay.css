@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&family=Roboto:ital,wght@0,400;0,500;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap');
+
+.nextback:hover {
+    -fx-cursor: hand;
+}
+
+.musica {
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 700;
+    -fx-text-fill: #e0e0e0;
+}
+.autor {
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 400;
+    -fx-text-fill: #4b4b4b;
+}
+
+.barraPlay {
+    -fx-background-color: #eeeded;
+    -fx-border-color: #727272;
+
+}
+.buttonPlayer:hover {
+    -fx-cursor: hand;
+}
+
+.progress-bar {
+    -fx-control-inner-background: #2E2E2E; /* Cor do fundo da barra de progresso */
+    -fx-accent: #FFD700; /* Cor do indicador de progresso */
+    -fx-padding: 1px; /* Ajuste o valor conforme necessário para tornar a barra mais fina */
+    -fx-background-radius: 1px; /* Ajuste o valor conforme necessário para tornar a barra mais fina */
+}
+
+.progress-bar .track {
+    -fx-background-color: #8c8c8c; /* Cor do fundo da barra de progresso não preenchida */
+    -fx-background-insets: 0; /* Remove a borda da track */
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #099bf8, #dd90f6);
+    -fx-background-insets: 0; /* Remove a borda da barra */
+}
+.slider .track {
+    -fx-background-color: transparent; /* Torna a trilha transparente */
+}
+
+.slider .thumb {
+    -fx-background-color: transparent; /* Cor do círculo vermelho */
+    -fx-background-radius: 10px; /* Ajuste o tamanho conforme necessário */
+    -fx-border-radius: 10px; /* Ajuste o tamanho conforme necessário */
+    -fx-border-color: transparent;
+    -fx-padding: 6px; /* Ajuste o espaço ao redor do thumb */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0); /* Adiciona sombra */
+}
+

@@ -1,0 +1,129 @@
+.painel5 {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15px 15px 15px 15px;
+}
+
+.combo-box .list-view:armed {
+
+}
+
+.box1 {
+    -fx-background-color: #383838;
+    -fx-border-color: transparent;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&family=Roboto:ital,wght@0,400;0,500;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap');
+
+
+.diretorios {
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 900;
+    -fx-text-fill: #e0e0e0;
+}
+.mfx-combo-box {
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-background-radius: 15px 15px 0px 0px;
+}
+.mfx-combo-box .caret {
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 15px 15px 0px 0px;
+    -fx-fill: #ffffff;
+    -fx-text-fill: #ffffff;
+    -fx-translate-x: -3;
+}
+
+.combo-box {
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 15px 15px 0px 0px;
+}
+
+.mfx-combo-box .combo-popup .virtual-flow .data-label {
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 300;
+    -fx-font-size: 15px;
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-padding: 0 10 0 10;
+    -fx-background-color: #e0e0e0;
+}
+.mfx-combo-box .combo-popup {
+    -fx-background-color: transparent;
+}
+.mfx-combo-box .combo-popup .virtual-flow {
+    -fx-background-color: transparent;
+}
+.mfx-combo-box .combo-popup .virtual-flow .data-label:hover {
+    -fx-text-fill: rgb(121, 121, 121);
+    -fx-cursor: hand;
+}
+.mfx-combo-box .combo-popup .virtual-flow .mfx-combo-box-cell {
+    -fx-translate-x: 10px;
+}
+.mfx-combo-box .text-field {
+    -fx-background-radius: 15px 15px 0px 0px;
+    -fx-font-size: 40px;
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-background-color: #e0e0e0;
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 500;
+}
+
+.view {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #282828;
+    -fx-max-width: inherit;
+    -fx-background-radius: 0px 0px 15px 15px;
+}
+.view .list-cell {
+    -fx-pref-width: 10px;
+}
+.view2 {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #282828;
+    -fx-max-width: inherit;
+    -fx-background-radius: 15px 15px 15px 15px;
+}
+
+.list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15px;
+    -fx-text-fill: #282828;
+    -fx-ellipsis-string: "...";
+}
+.list-view .list-cell:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: #000000;
+}
+
+.list-view .list-cell:selected {
+    -fx-text-fill: #000000;
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-pref-width: 200px;
+    -fx-background-color: #858585;
+    -fx-background-radius: 15px;
+}
+
+.list-view .scroll-bar:vertical,
+.list-view .scroll-bar:horizontal {
+    -fx-scale-x: 0;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-opacity: 0;
+    -fx-visibility: hidden;
+}
+
+.mfx-button {
+    -fx-background-color: linear-gradient(to right, #1c93be, #e461ee);
+    -fx-background-radius: 15px;
+    -fx-text-fill: white;
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 600;
+    -fx-font-size: 20px;
+}
+.mfx-button:hover {
+    -fx-cursor: hand;
+    -fx-scale-x: 1.3;
+    -fx-scale-z: 1.3;
+    -fx-scale-y: 1.3;
+}

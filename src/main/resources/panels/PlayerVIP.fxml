@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<AnchorPane fx:id="painelPlayer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #eeeded;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.player.ControlMain.PremiumControl">
+    <children>
+        <Pane fx:id="painelPlayer3" layoutX="-1.0" layoutY="714.0" prefHeight="88.0" prefWidth="1406.0" styleClass="barraPlay" stylesheets="@../css/principal/barraplay.css">
+            <children>
+                <HBox fx:id="musicPause" alignment="CENTER" layoutX="76.0" layoutY="15.0" prefHeight="53.0" prefWidth="145.0" spacing="20.0" style="-fx-background-color: #eeeded;" stylesheets="@../css/principal/barraplay.css">
+                    <children>
+                        <FontAwesomeIcon fill="#616161" glyphName="BACKWARD" onMouseClicked="#musicaAnterior" size="20px" styleClass="nextback">
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="botaoPlay" glyphName="PLAY" onMouseClicked="#botaoPlayer" selectionFill="#bc0000" size="30px" styleClass="buttonPlayer">
+                            <fill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="0.10980392247438431" green="0.5764706134796143" blue="0.7450980544090271" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="0.006711409395973154">
+                                            <color>
+                                                <Color red="0.10980392247438431" green="0.5764706134796143" blue="0.7450980544090271" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="0.8941176533699036" green="0.3803921639919281" blue="0.9333333373069763" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </fill></FontAwesomeIcon>
+                        <FontAwesomeIcon fill="#616161" glyphName="FORWARD" onMouseClicked="#proximaMusica" size="20px" styleClass="nextback">
+                        </FontAwesomeIcon>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                    </padding></HBox>
+                <HBox fx:id="musicTocando" alignment="CENTER" layoutX="76.0" layoutY="15.0" prefHeight="53.0" prefWidth="145.0" spacing="20.0" style="-fx-background-color: #eeeded;" stylesheets="@../css/principal/barraplay.css">
+                    <children>
+                        <FontAwesomeIcon fill="#616161" glyphName="BACKWARD" onMouseClicked="#musicaAnterior" size="20px" styleClass="nextback">
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="botaoPausar" glyphName="PAUSE" onMouseClicked="#botaoPlayer" size="30px" styleClass="buttonPlayer">
+                            <fill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="0.10980392247438431" green="0.5764706134796143" blue="0.7450980544090271" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="0.006711409395973154">
+                                            <color>
+                                                <Color red="0.10980392247438431" green="0.5764706134796143" blue="0.7450980544090271" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="0.8941176533699036" green="0.3803921639919281" blue="0.9333333373069763" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </fill>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fill="#616161" glyphName="FORWARD" onMouseClicked="#proximaMusica" size="20px" styleClass="nextback">
+                        </FontAwesomeIcon>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                    </padding>
+                </HBox>
+                <ProgressBar fx:id="musicProgress" layoutX="506.0" layoutY="41.0" prefHeight="5.0" prefWidth="467.0" progress="0.0" stylesheets="@../css/principal/barraplay.css" />
+                <Slider fx:id="musicProgress2" layoutX="506.0" layoutY="23.0" prefHeight="43.0" prefWidth="467.0" />
+                <Label fx:id="tempoAtual" alignment="CENTER" layoutX="448.0" layoutY="35.0" prefHeight="17.0" prefWidth="40.0" textFill="#4b4b4b" />
+                <Label fx:id="autor" layoutX="298.0" layoutY="20.0" prefHeight="43.0" prefWidth="130.0" styleClass="autor" stylesheets="@../css/principal/barraplay.css" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="tempoTotal" alignment="CENTER" layoutX="991.0" layoutY="33.0" prefHeight="17.0" prefWidth="40.0" textFill="#4b4b4b" />
+            </children>
+        </Pane>
+        <Pane prefHeight="722.0" prefWidth="1400.0" style="-fx-border-color: #727272;" styleClass="Stack1" stylesheets="@../css/principal/css.css">
+            <children>
+                <MFXButton fx:id="diretorioAdicionar" buttonType="RAISED" layoutX="447.0" layoutY="583.0" onAction="#chooseDirectory" prefHeight="43.0" prefWidth="290.0" stylesheets="@../css/principal/listviews/listview.css" text=" Adicionar diretório">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="FOLDER_OPEN" size="20PX" />
+                    </graphic></MFXButton>
+                <MFXButton fx:id="playlistCriar" buttonType="RAISED" layoutX="859.0" layoutY="583.0" onAction="#createPlaylist" prefHeight="43.0" prefWidth="290.0" stylesheets="@../css/principal/listviews/listview.css" text=" Nova Playlist">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="LIST" size="20PX" />
+                    </graphic></MFXButton>
+                <Label layoutX="823.0" layoutY="69.0" prefHeight="47.0" prefWidth="196.0" style="-fx-font-family: Poppins; -fx-font-weight: 700;" styleClass="diretorios" stylesheets="@../css/principal/listviews/listview.css" text="Playlists">
+                    <font>
+                        <Font size="31.0" />
+                    </font>
+                </Label>
+                <Label layoutX="410.0" layoutY="69.0" prefHeight="47.0" prefWidth="173.0" style="-fx-font-family: Poppins; -fx-font-weight: 700;" styleClass="diretorios" stylesheets="@../css/principal/listviews/listview.css" text="Diretórios" textFill="#070707">
+                    <font>
+                        <Font size="31.0" />
+                    </font>
+                </Label>
+                <Pane fx:id="painel51" layoutX="410.0" layoutY="130.0" prefHeight="436.0" prefWidth="363.0" styleClass="painel5" stylesheets="@../css/principal/listviews/listview.css">
+                    <children>
+                        <ListView fx:id="musicListView" layoutY="69.0" onDragDetected="#musiclistViewDetected" onMouseClicked="#clicouMusica2" prefHeight="367.0" prefWidth="362.0" styleClass="view" stylesheets="@../css/principal/listviews/listview.css">
+                            <padding>
+                                <Insets bottom="3.0" left="5.0" right="5.0" top="10.0" />
+                            </padding>
+                        </ListView>
+                        <MFXComboBox fx:id="testeDiretorio" floatMode="DISABLED" floatingText="Escolha um diretório:" floatingTextGap="0.0" onMouseClicked="#clicouComboBox" popupOffsetY="15.0" prefHeight="46.0" prefWidth="362.0" styleClass="combo-box" stylesheets="@../css/principal/listviews/listview.css">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                            <textFill>
+                                <Color red="1.0" green="1.0" blue="1.0" opacity="0.8700000047683716" />
+                            </textFill>
+                        </MFXComboBox>
+                    </children>
+                </Pane>
+                <Pane fx:id="painel5" layoutX="823.0" layoutY="130.0" prefHeight="436.0" prefWidth="362.0" styleClass="painel5" stylesheets="@../css/principal/listviews/listview.css">
+                    <children>
+                        <ListView fx:id="playlistMusic" layoutY="69.0" onDragDropped="#playlistMusicDragDropped" onDragOver="#playlistMusicDragOver" onMouseClicked="#clicouMusica" prefHeight="367.0" prefWidth="362.0" styleClass="view" stylesheets="@../css/principal/listviews/listview.css">
+                            <padding>
+                                <Insets bottom="3.0" left="5.0" right="5.0" top="10.0" />
+                            </padding></ListView>
+                        <MFXComboBox fx:id="testePlaylist" floatMode="DISABLED" floatingText="Escolha uma playlist:" floatingTextGap="0.0" popupOffsetY="15.0" prefHeight="46.0" prefWidth="362.0" styleClass="combo-box">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                            <textFill>
+                                <Color red="1.0" green="1.0" blue="1.0" opacity="0.8700000047683716" />
+                            </textFill>
+                     <stylesheets>
+                        <URL value="@../css/principal/listviews/listview.css" />
+                        <URL value="@../css/principal/listviews/listview.css" />
+                     </stylesheets>
+                        </MFXComboBox>
+                        <TextField fx:id="editTextfield" layoutY="2.0" prefHeight="46.0" prefWidth="304.0" style="-fx-background-color: e0e0e0;" styleClass="text" stylesheets="@../css/principal/css.css" visible="false">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </TextField>
+                        <FontAwesomeIcon fx:id="checkbox" glyphName="CHECK" layoutX="314.0" layoutY="39.0" onMouseClicked="#salvarEdit" size="40PX" visible="false" />
+                    </children>
+                </Pane>
+                <Pane fx:id="painelConfig" prefHeight="722.0" prefWidth="295.0" styleClass="painel" stylesheets="@../css/principal/sidebar.css">
+                    <children>
+                        <FontAwesomeIcon fx:id="voltarConfig" glyphName="ARROW_LEFT" layoutX="32.0" layoutY="63.0" onMouseClicked="#voltarConfig" size="40px" styleClass="config" />
+                        <VBox layoutX="16.0" layoutY="115.0" prefHeight="503.0" prefWidth="263.0" stylesheets="@../css/principal/sidebar.css">
+                            <children>
+                                <Label fx:id="labelNome" styleClass="texto3" stylesheets="@../css/login.css" text="Digite seu nome completo:" />
+                                <HBox fx:id="CaixaNome" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
+                                    <children>
+                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
+                                            <children>
+                                                <FontAwesomeIcon glyphName="INFO_CIRCLE" layoutX="13.0" layoutY="30.0" size="25px" />
+                                            </children>
+                                        </Pane>
+                                        <TextField fx:id="regNome" focusTraversable="false" prefHeight="43.0" prefWidth="196.0" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="labelEmail" styleClass="texto3" stylesheets="@../css/login.css" text="Digite o seu email:" />
+                                <HBox fx:id="CaixaEmail" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
+                                    <children>
+                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
+                                            <children>
+                                                <FontAwesomeIcon glyphName="AT" layoutX="13.0" layoutY="30.0" size="25px" />
+                                            </children>
+                                        </Pane>
+                                        <TextField fx:id="regEmail" focusTraversable="false" prefHeight="43.0" prefWidth="204.0" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="labelSenha" prefHeight="20.0" prefWidth="104.0" styleClass="texto3" stylesheets="@../css/login.css" text="Digite sua senha:" />
+                                <HBox fx:id="CaixaSenha" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
+                                    <children>
+                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
+                                            <children>
+                                                <FontAwesomeIcon glyphName="LOCK" layoutX="14.0" layoutY="30.0" size="25px" />
+                                            </children>
+                                        </Pane>
+                                        <TextField fx:id="regSenha" focusTraversable="false" prefHeight="43.0" prefWidth="204.0" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="25.0" />
+                                    </VBox.margin>
+                                </HBox>
+                        <MFXButton fx:id="botaoFoto" onAction="#escolherFoto" prefHeight="50.0" prefWidth="195.0" style="-fx-background-color: linear-gradient(to right, #099bf8, #dd90f6);" styleClass="buttonProfile" stylesheets="@../css/principal/sidebar.css" text="ESCOLHER FOTO" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="40.0" />
+                           </VBox.margin>
+                        </MFXButton>
+                                <StackPane fx:id="imagemPerfilContainer1" prefHeight="120.0" prefWidth="120.0" styleClass="imagemPerfilContainer" stylesheets="@../css/principal/sidebar.css">
+                                    <children>
+                                        <ImageView fx:id="imagemPerfil1" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="false" styleClass="imagemPerfil">
+                                            <clip>
+                                                <Circle centerX="60.0" centerY="60.0" radius="60.0" />
+                                            </clip>
+                                            <image>
+                                                <Image url="@../../../../../../../Downloads/perfil.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </StackPane>
+                            </children>
+                        </VBox>
+                        <FontAwesomeIcon fx:id="salvarConfig" glyphName="CHECK_CIRCLE" layoutX="226.0" layoutY="66.0" onMouseClicked="#salvarConfigRegistro" size="50px" styleClass="config" />
+                    </children>
+                </Pane>
+                <FontAwesomeIcon fx:id="deletePlaylist" glyphName="TRASH" layoutX="1125.0" layoutY="103.0" onMouseClicked="#deletarPlaylist" size="30px" styleClass="hover" />
+                <FontAwesomeIcon glyphName="PENCIL" layoutX="1159.0" layoutY="103.0" onMouseClicked="#editarPlaylist" size="30px" styleClass="hover" />
+                <Pane fx:id="painelPerfil" prefHeight="722.0" prefWidth="295.0" style="-fx-background-color: #eeeded;" styleClass="painel" stylesheets="@../css/principal/sidebar.css" visible="false">
+                    <children>
+                        <Label fx:id="perfilNome" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="300.0" prefHeight="42.0" prefWidth="255.0" styleClass="nome" text="Gustavo" textAlignment="CENTER" wrapText="true">
+                     <stylesheets>
+                        <URL value="@../css/principal/sidebar.css" />
+                        <URL value="@../css/principal/sidebar.css" />
+                     </stylesheets></Label>
+                        <FontAwesomeIcon fx:id="botaoConfig" glyphName="COG" layoutX="19.0" layoutY="51.0" onMouseClicked="#abrirConfig" size="40px" styleClass="config">
+                            <fill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="0.10980392247438431" green="0.5764706134796143" blue="0.7450980544090271" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="0.8941176533699036" green="0.3803921639919281" blue="0.9333333373069763" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </fill>
+                        </FontAwesomeIcon>
+                        <StackPane fx:id="imagemPerfilContainer" layoutX="88.0" layoutY="172.0" prefHeight="120.0" prefWidth="120.0" styleClass="imagemPerfilContainer" stylesheets="@../css/principal/sidebar.css">
+                            <children>
+                                <ImageView fx:id="imagemPerfil" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="false" styleClass="imagemPerfil">
+                                    <clip>
+                                        <Circle centerX="60.0" centerY="60.0" radius="60.0" />
+                                    </clip>
+                                    <image>
+                                        <Image url="@../../../../../../../Downloads/perfil.jpg" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </StackPane>
+                        <Label fx:id="perfilEmail" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="328.0" prefHeight="42.0" prefWidth="255.0" styleClass="email" stylesheets="@../css/principal/sidebar.css" text="gushd891@gmail.com" textAlignment="CENTER" underline="true" wrapText="true">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="386.0" prefHeight="53.0" prefWidth="200.0" styleClass="botaoVIP" stylesheets="@../css/principal/sidebar.css" text="CONTA VIP" />
+                    </children></Pane>
+            </children>
+        </Pane>
+    </children>
+   <stylesheets>
+      <URL value="@../css/principal/css.css" />
+      <URL value="@../css/principal/css.css" />
+   </stylesheets>
+</AnchorPane>

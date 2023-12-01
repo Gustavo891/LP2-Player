@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+
+.botao:hover {
+    -fx-cursor: hand;
+    -fx-scale-x: 1.1;
+    -fx-scale-z: 1.1;
+    -fx-scale-y: 1.1;
+}
+.textohover:hover {
+    -fx-cursor: hand;
+}
+.box-vermelha .box {
+    -fx-background-color: #bd5670;
+    -fx-border-color: #de2237;
+}
+.background {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #efeae7 0.0%, #ffffff 100.0%);
+}
+.background2 {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 50, 0.2, 0, 2);
+}
+
+.valor {
+    -fx-font: 16px 'Open Sans', sans-serif;
+    -fx-font-weight: 500;
+    -fx-text-fill: #6a6a6c;
+}
+.valor2 {
+    -fx-font: 30px 'Open Sans', sans-serif;
+    -fx-font-weight: 700;
+    -fx-text-fill: #ffffff;
+}
+.valorPainel {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #099bf8 0.0%, #dd90f6 100.0%);
+
+}
+.criar {
+    -fx-font: 38px 'Open Sans', sans-serif;
+    -fx-font-weight: 700;
+    -fx-text-fill: #3e4348;
+}
+.titulo {
+    -fx-font: 30px 'Open Sans', sans-serif;
+    -fx-font-weight: 700;
+    -fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #099bf8 0.0%, #dd90f6 100.0%);
+}
+
+.mfx-text-field {
+    -fx-border-color: transparent;
+    -fx-border-style: none;
+}
+.mfx-text-field .floating-text {
+    -fx-border-color: transparent;
+    -fx-border-style: none;
+}
+.mfx-text-field .text-field {
+    -fx-border-color: transparent;
+    -fx-border-style: none;
+}
+.registre {
+    -fx-font: 14px 'Open Sans', sans-serif;
+    -fx-font-weight: 700;
+    -fx-text-fill: #0521ca;
+}
+.ativado {
+    -fx-font: 18px 'Open Sans', sans-serif;
+    -fx-font-weight: 500;
+    -fx-text-fill: #383838;
+}
+
+.botaoAcessar {
+    -fx-background-radius: 30px;
+    -fx-background-color: rgb(13, 185, 69);
+    -fx-text-fill: white;
+    -fx-font: 22px 'Roboto', sans-serif;
+    -fx-font-weight: 900;
+}
+.voltar {
+    -fx-background-radius: 30px;
+    -fx-background-color: rgb(217, 6, 23);
+    -fx-text-fill: white;
+    -fx-font: 22px 'Roboto', sans-serif;
+    -fx-font-weight: 900;
+}
+.botaoVIP {
+    -fx-background-radius: 0px;
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #099bf8 0.0%, #dd90f6 100.0%);
+    -fx-text-fill: white;
+    -fx-font: 22px 'Roboto', sans-serif;
+    -fx-font-weight: 900;
+}
+
+.vip {
+    -fx-background-radius: 30px;
+    -fx-background-color: rgb(50, 208, 238);
+    -fx-text-fill: white;
+    -fx-font: 18px 'Roboto', sans-serif;
+    -fx-font-weight: 900;
+}
+
+.linear-grad {
+    -fx-background-color: linear-gradient(to bottom left, #82d7f5, #28a2cc);
+}
+
+.login {
+    -fx-font: 26px 'Open Sans', sans-serif;
+    -fx-font-weight: 700;
+}
+.arredondar {
+    -fx-border-radius: 7 7 7 7;
+    -fx-background-radius: 7 7 7 7;
+}
+
+.botaoRegistrar {
+    -fx-background-color: #c3f8f4;
+    -fx-border-color: #28a2cc;
+}
+.botaoRegistrar:hover {
+    -fx-background-color: #c3f8f4;
+    -fx-border-color: #28a2cc;
+    -fx-cursor: hand;
+}
+
+.esqueceu {
+    -fx-font: 14px 'Open Sans', sans-serif;
+}
+.borda-vermelha {
+    -fx-border-color: #de2237;
+}
+.botaoLogin {
+    -fx-background-color: #28a2cc;
+    -fx-border-color: #28a2cc;
+    -fx-font: 14px 'Open Sans', sans-serif;
+}
+
+.pane-rounded-left {
+    -fx-border-radius: 0 0 0 0; /* Arredonda somente os cantos esquerdos */
+    -fx-background-radius: 1 0 0 1; /* Arredonda somente os cantos esquerdos do fundo */
+}
+
+.texto {
+     -fx-font: 26px 'Open Sans', sans-serif;
+     -fx-font-weight: 400;
+}
+
+.texto2 {
+    -fx-font: 26px 'Open Sans', sans-serif;
+    -fx-font-weight: 700;
+}
+.texto3 {
+    -fx-font: 13px 'Open Sans', sans-serif;
+}
+
+.icones {
+    -fx-cursor: pointer;
+}
+
+.icones:hover {
+    -fx-cursor: hand;
+}
+
+/*
+.loginPainel  {
+    -fx-background-color: rgb(253, 248, 248); /* Cor de fundo do painel
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 50, 0.2, 0, 2);
+}
+*/
+.fieldsLogin {
+    -fx-background-color: transparent;
+    -fx-font: 14px 'Open Sans', sans-serif;
+    -fx-font-weight: 600;
+    -fx-border-color: transparent;
+    -fx-border-style: none;
+}
+.hboxLogin {
+    -fx-background-color: white;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 20, 0.5, 1, 3);
+}
