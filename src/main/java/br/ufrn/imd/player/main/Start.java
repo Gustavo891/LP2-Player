@@ -16,9 +16,9 @@ public class Start extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("/panels/Login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        Image appIcon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/icon.png")));
+        Image appIcon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/music2.png")));
         stage.getIcons().add(appIcon);
-        stage.setTitle("MusicFX");
+        stage.setTitle("MusicFX - O melhor player de música!");
         stage.setResizable(false);
         stage.setScene(scene);
 

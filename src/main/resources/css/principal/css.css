@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap');
 
 
+.credenciais {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 1, 4, 2, 2); /* Adiciona sombra */
+}
+
 .MenuEsquerda {
     -fx-background-color: #ffffff;
     /*-fx-background-radius: 15px;
@@ -14,6 +18,10 @@
 .Stack1 {
     -fx-border-color: #cecdcd;
     -fx-background-color: rgb(255, 255, 255);
+}
+
+.config:hover {
+    -fx-cursor: hand;
 }
 
 .botaoPlay {

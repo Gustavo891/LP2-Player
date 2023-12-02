@@ -12,25 +12,48 @@ public class UserDirectories {
     private List<String> directories;
     protected static final String CONFIG_FILE = "config.json";
 
+
     public UserDirectories(int userId) {
         this.userId = userId;
         this.directories = new ArrayList<>();
     }
 
+    /**
+     * Retorna o id do usuário.
+     * @return
+     */
     public int getUserId() {
         return userId;
     }
+
+    /**
+     * Seta o id do usuário para os diretórios.
+     * @param user
+     */
     public void setUserId(int user) {
         this.userId = user;
     }
 
+    /**
+     * Retorna os diretórios.
+     * @return
+     */
     public List<String> getDirectories() {
         return directories;
     }
 
+    /**
+     * Adiciona um diretório novo para o usuário.
+     * @param directoryPath
+     */
     public void addDirectory(String directoryPath) {
         directories.add(directoryPath);
     }
+
+    /**
+     * Carrega os diretórios do usuário da config.
+     * @return
+     */
     public List<String> loadDirectoriesFromConfig() {
         try (Reader reader = new FileReader(CONFIG_FILE)) {
             Gson gson = new Gson();
@@ -58,7 +81,9 @@ public class UserDirectories {
         // Retorna lista vazia em caso de erro ou se directories estiver vazio.
         return new ArrayList<>();
     }
-
+    /**
+     * Salva os diretórios do usuário na config, tanto os novos, como os antigos.
+     */
     public void saveDirectoriesToConfig() {
         try (Reader reader = new FileReader(CONFIG_FILE)) {
             Gson gson = new Gson();
@@ -118,6 +143,11 @@ public class UserDirectories {
         }
     }
 
+    /**
+     * Verifica se um diretório existe. Retorna true caso exista.
+     * @param directoryPath
+     * @return
+     */
     private boolean directoryExists(String directoryPath) {
         File directory = new File(directoryPath);
         return directory.exists();

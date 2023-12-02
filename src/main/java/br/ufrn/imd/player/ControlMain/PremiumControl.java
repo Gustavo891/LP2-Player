@@ -37,17 +37,28 @@ public class PremiumControl {
 
     protected VipUser usuarioLogado = new VipUser("", "", false, 0, "", "", "");
     protected UserDirectories userDirectories = new UserDirectories(0);
-
+    protected boolean playlist = false;
+    protected String caminhoFoto;
+    protected Boolean foto = false;
+    protected boolean diretorio = false;
+    protected List<String> directories = new ArrayList<>();
+    protected MediaPlayer mediaPlayer;
+    protected boolean ConferirArrasto = false;
+    /**
+     * Define o usuário logado e inicializa o controle.
+     *
+     * @param usuarioLogado O usuário logado.
+     */
     public void setLogado(VipUser usuarioLogado) {
         this.usuarioLogado = usuarioLogado;
         System.out.println("Logado ID" + usuarioLogado.getId());
         userDirectories.setUserId(usuarioLogado.getId());
         initialize();
     }
-
-    protected boolean playlist = false;
-    protected boolean diretorio = false;
-
+    @FXML
+    protected TextField regNome, regEmail, regSenha, editTextfield;
+    @FXML
+    protected Button botaoFoto;
     @FXML
     protected MFXComboBox testeDiretorio, testePlaylist;
     @FXML
@@ -64,10 +75,9 @@ public class PremiumControl {
     protected Pane painelPerfil, painelConfig;
     @FXML
     protected ImageView imagemPerfil, imagemPerfil1, botaoPlay, botaoPausar, checkbox;
-
-    protected List<String> directories = new ArrayList<>();
-    protected MediaPlayer mediaPlayer;
-    protected boolean ConferirArrasto = false;
+    /**
+     * Inicializa o controle.
+     */
     public void initialize() {
 
         testePlaylist.setVisible(true);
@@ -109,7 +119,11 @@ public class PremiumControl {
         testePlaylist.showingProperty().addListener((observable, oldValue, newValue) -> playlistMusic.setVisible(!newValue));
         loadPerfil();
     }
-
+    /**
+     * Lê os usuários do arquivo JSON e retorna a lista de usuários.
+     *
+     * @return A lista de usuários lida do arquivo JSON.
+     */
     protected List<UserFree> readUsersFromFile() {
         File file = new File("registros.json");
 
@@ -135,6 +149,11 @@ public class PremiumControl {
             return new ArrayList<>();
         }
     }
+    /**
+     * Escreve a lista de usuários no arquivo JSON.
+     *
+     * @param users A lista de usuários a ser escrita.
+     */
     protected void writeUsersToFile(List<UserFree> users) {
         File file = new File("registros.json");
 
@@ -152,19 +171,20 @@ public class PremiumControl {
             e.printStackTrace();
         }
     }
-
-    @FXML
-    protected TextField regNome, regEmail, regSenha;
-    @FXML
-    protected Button botaoFoto;
-    protected String caminhoFoto;
-    protected Boolean foto = false;
-
+    /**
+     * Volta para o painel de perfil a partir do painel de configurações.
+     *
+     * @param mouseEvent O evento de clique do mouse.
+     */
     public void voltarConfig(MouseEvent mouseEvent) {
         painelPerfil.setVisible(true);
         painelConfig.setVisible(false);
     }
-
+    /**
+     * Abre o painel de configurações a partir do painel de perfil.
+     *
+     * @param mouseEvent O evento de clique do mouse.
+     */
     public void abrirConfig(MouseEvent mouseEvent) {
         regEmail.setPromptText(usuarioLogado.getEmail());
         regNome.setPromptText(usuarioLogado.getNomeCompleto());
@@ -172,7 +192,6 @@ public class PremiumControl {
         painelConfig.setVisible(true);
         painelPerfil.setVisible(false);
     }
-
     @FXML
     protected void salvarConfigRegistro(MouseEvent mouseEvent) {
         String novoNome = regNome.getText();
@@ -211,7 +230,6 @@ public class PremiumControl {
                     painelConfig.setVisible(false);
                     break; // Stop searching once the user is found and updated
                 }
-                System.out.println("USUARIO NOVO: " + user);
             }
 
             writeUsersToFile(users);
@@ -221,7 +239,6 @@ public class PremiumControl {
             System.out.println("Não teve nada para ser atualizado.");
         }
     }
-
     public void escolherFoto(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Escolher Foto de Perfil");
@@ -232,11 +249,9 @@ public class PremiumControl {
 
         // Abre o diálogo de escolha de arquivo
         File selectedFile = fileChooser.showOpenDialog(null);
-        System.out.println(selectedFile);
         // Verifica se um arquivo foi selecionado
         if (selectedFile != null) {
             caminhoFoto = selectedFile.getAbsolutePath();
-            System.out.println(caminhoFoto);
             Image image = new Image("file:" + caminhoFoto);
             imagemPerfil1.setImage(image);
             foto = true;
@@ -245,19 +260,19 @@ public class PremiumControl {
             System.out.println("Nenhum arquivo selecionado.");
         }
     }
-
+    /**
+     * Carrega os diretórios do usuário a partir do arquivo de configuração.
+     */
     protected void loadPerfil() {
         String icon = usuarioLogado.getUserIcon();
         try {
             if(usuarioLogado.getUserIcon().equals("padrao")) {
-                System.out.println("imagem padrão");
                 String path = "/images/perfil.jpg";
                 Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(path)));
                 imagemPerfil.setImage(image);
                 imagemPerfil1.setImage(image);
 
             } else {
-                System.out.println("imagem custom");
                 Image image = new Image("file:" + icon);
                 imagemPerfil.setImage(image);
                 imagemPerfil1.setImage(image);
@@ -269,6 +284,9 @@ public class PremiumControl {
         perfilEmail.setText(usuarioLogado.getEmail());
         perfilNome.setText(usuarioLogado.getUsername());
     }
+    /**
+     * Carrega os diretórios do usuário a partir do arquivo de configuração.
+     */
     @FXML
     protected void loadDirectoriesFromConfig() {
         testeDiretorio.getItems().clear();
@@ -278,11 +296,18 @@ public class PremiumControl {
         }
 
     }
+    /**
+     * Limpa as listas de músicas.
+     */
     protected void clearlistViews() {
         musicListView.getItems().clear();
         testePlaylist.getItems().clear();
         testeDiretorio.getItems().clear();
     }
+    /**
+     * Os três metodos abaixam pegam o DragEvent onde você arrasta a música dos diretórios
+     * até a playlist desejada.
+     */
     @FXML
     protected void playlistMusicDragDropped(DragEvent dragEvent) {
         Dragboard dragboard = dragEvent.getDragboard();
@@ -322,6 +347,9 @@ public class PremiumControl {
         }
         mouseEvent.consume();
     }
+    /**
+     * Avança para a próxima música na lista.
+     */
     @FXML
     protected void proximaMusica() {
         if(!playlist) {
@@ -347,6 +375,9 @@ public class PremiumControl {
             }
         }
     }
+    /**
+     * Reproduz a música anterior na lista.
+     */
     @FXML
     protected void musicaAnterior() {
         if(!playlist) {
@@ -369,6 +400,9 @@ public class PremiumControl {
             playSelectedPlaylistMusic(selectedMusic);
         }
     }
+    /**
+     * Toda a música selecionada da playlist.
+     */
     @FXML
     protected void playSelectedPlaylistMusic(String selectedMusicName) {
         musicListView.getSelectionModel().clearSelection();
@@ -421,6 +455,9 @@ public class PremiumControl {
             }
         }
     }
+    /**
+     * Configura o controle do slider do progresso da música.
+     */
     @FXML
     protected void configureProgressSlider() {
         if (mediaPlayer != null) {
@@ -462,6 +499,11 @@ public class PremiumControl {
             });
         }
     }
+    /**
+     * Manipula eventos do botão de reprodução/pausa da música.
+     *
+     * @param mouseEvent O evento de clique do mouse.
+     */
     @FXML
     protected void botaoPlayer(MouseEvent mouseEvent) {
         Object source = mouseEvent.getSource();
@@ -481,12 +523,20 @@ public class PremiumControl {
         }
 
     }
+    /**
+     * Verifica se alguma música está sendo reproduzida.
+     *
+     * @return true se uma música estiver sendo reproduzida, false caso contrário.
+     */
     @FXML
     protected boolean isMusicPlaying() {
         return mediaPlayer != null &&
                 (mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING ||
                         mediaPlayer.getStatus() == MediaPlayer.Status.PAUSED);
     }
+    /**
+     * Manipula o clique em uma música na lista de músicas do diretório atual.
+     */
     @FXML
     protected void clicouMusica2() {
         String selectedMusic = musicListView.getSelectionModel().getSelectedItem();
@@ -494,6 +544,9 @@ public class PremiumControl {
             playSelectedMusic(musicListView.getSelectionModel().getSelectedIndex());
         }
     }
+    /**
+     * Reproduz a música selecionada na lista de músicas do diretório atual.
+     */
     @FXML
     protected void playSelectedMusic(int selectedIndex) {
         playlistMusic.getSelectionModel().clearSelection();
@@ -544,6 +597,9 @@ public class PremiumControl {
             System.out.println("Musica não pode ser tocado pois está sendo arrastada até um destino.");
         }
     }
+    /**
+     * Reproduz a música selecionada na lista de músicas da playlist atual.
+     */
     @FXML
     protected void clicouMusica() {
         String selectedMusic = playlistMusic.getSelectionModel().getSelectedItem();
@@ -551,6 +607,11 @@ public class PremiumControl {
             playSelectedPlaylistMusic(selectedMusic);
         }
     }
+    /**
+     * Configura a barra de progresso para uma determinada mídia.
+     *
+     * @param media A mídia a ser configurada.
+     */
     @FXML
     protected void setupProgressBar(Media media) {
         mediaPlayer.currentTimeProperty().addListener((observable, oldValue, newValue) -> {
@@ -563,6 +624,9 @@ public class PremiumControl {
         });
 
     }
+    /**
+     * Para a reprodução da música atual.
+     */
     @FXML
     protected void stopMusic() {
         if (mediaPlayer != null) {
@@ -579,6 +643,9 @@ public class PremiumControl {
             musicPause.toFront();
         }
     }
+    /**
+     * Abre o seletor de diretórios para escolher um novo diretório de músicas.
+     */
     @FXML
     protected void chooseDirectory() {
         DirectoryChooser directoryChooser = new DirectoryChooser();
@@ -593,6 +660,9 @@ public class PremiumControl {
             updateMusicList();
         }
     }
+    /**
+     * Atualiza a lista de músicas com base no diretório selecionado.
+     */
     @FXML
     protected void updateMusicList() {
         musicListView.getItems().clear();
@@ -608,6 +678,12 @@ public class PremiumControl {
             }
         }
     }
+    /**
+     * Remove a extensão de arquivo de um nome de arquivo.
+     *
+     * @param fileName O nome do arquivo.
+     * @return O nome do arquivo sem a extensão.
+     */
     @FXML
     protected String removeFileExtension(String fileName) {
         int lastDotIndex = fileName.lastIndexOf(".");
@@ -616,11 +692,16 @@ public class PremiumControl {
         }
         return fileName;
     }
-
+    /**
+     * Atualiza a combobox para ver se uma playlist nova foi selecionada.
+     */
     public void clicouComboBox() {
         updateMusicList();
     }
-
+    /**
+     * Chamao metodo para deletar uma playlist ao clicar no botão da lixeira.
+     * @param mouseEvent
+     */
     public void deletarPlaylist(MouseEvent mouseEvent) {
         if(testePlaylist.getSelectedItem() != null) {
             System.out.println(testePlaylist.getValue() + " removido");
@@ -631,6 +712,10 @@ public class PremiumControl {
             System.out.println("nada selecionado");
         }
     }
+    /**
+     * Chama a tela para criar uma playlist nova.
+     * @param event
+     */
     @FXML
     protected void createPlaylist(ActionEvent event) {
         try {
@@ -657,8 +742,10 @@ public class PremiumControl {
 
         }
     }
-    @FXML
-    protected TextField editTextfield;
+    /**
+     * Salva o edit da playlist.
+     * @param mouseEvent
+     */
     public void salvarEdit(MouseEvent mouseEvent) {
         String playlistAtual = testePlaylist.getSelectedItem().toString();
         String novoNome = editTextfield.getText();
@@ -676,8 +763,15 @@ public class PremiumControl {
             }
         } else {
             System.out.println("Erro");
+            editTextfield.clear();
+            editTextfield.deselect();
+            editTextfield.setPromptText("Nome inválido. Tente novamente.");
         }
     }
+    /**
+     * Abre o painel para que o usuário digite o novo nome da playlist.
+     * @param mouseEvent
+     */
     public void editarPlaylist(MouseEvent mouseEvent) {
 
         if (testePlaylist.getSelectedItem() != null) {

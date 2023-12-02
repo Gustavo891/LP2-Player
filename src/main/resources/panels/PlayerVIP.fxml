@@ -26,17 +26,17 @@
             <children>
                 <HBox fx:id="musicPause" alignment="CENTER" layoutX="76.0" layoutY="15.0" prefHeight="53.0" prefWidth="145.0" spacing="20.0" style="-fx-background-color: #eeeded;" stylesheets="@../css/principal/barraplay.css">
                     <children>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#musicaAnterior" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#musicaAnterior" pickOnBounds="true" preserveRatio="true" styleClass="config">
                      <image>
                         <Image url="@../images/voltar.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="botaoPlay" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#botaoPlayer" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="botaoPlay" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#botaoPlayer" pickOnBounds="true" preserveRatio="true" styleClass="config">
                      <image>
                         <Image url="@../images/play.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#proximaMusica" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#proximaMusica" pickOnBounds="true" preserveRatio="true" styleClass="config">
                      <image>
                         <Image url="@../images/next.png" />
                      </image>
@@ -56,17 +56,17 @@
                 <Label fx:id="tempoTotal" alignment="CENTER" layoutX="991.0" layoutY="33.0" prefHeight="17.0" prefWidth="40.0" textFill="#4b4b4b" />
                 <HBox fx:id="musicTocando" alignment="CENTER" layoutX="76.0" layoutY="15.0" prefHeight="53.0" prefWidth="145.0" spacing="20.0" style="-fx-background-color: #eeeded;" stylesheets="@../css/principal/barraplay.css">
                     <children>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#musicaAnterior" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#musicaAnterior" pickOnBounds="true" preserveRatio="true" styleClass="config">
                      <image>
                         <Image url="@../images/voltar.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="botaoPausar" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#botaoPlayer" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="botaoPausar" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#botaoPlayer" pickOnBounds="true" preserveRatio="true" styleClass="config">
                      <image>
                         <Image url="@../images/pausa.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#proximaMusica" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#proximaMusica" pickOnBounds="true" preserveRatio="true" styleClass="config">
                      <image>
                         <Image url="@../images/next.png" />
                      </image>
@@ -162,24 +162,24 @@
                                 </StackPane>
                             </children>
                         </VBox>
-                  <ImageView fx:id="salvarConfig" fitHeight="63.0" fitWidth="60.0" layoutX="216.0" layoutY="25.0" onMouseClicked="#salvarConfigRegistro" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="salvarConfig" fitHeight="63.0" fitWidth="60.0" layoutX="216.0" layoutY="25.0" onMouseClicked="#salvarConfigRegistro" pickOnBounds="true" preserveRatio="true" styleClass="config">
                      <image>
                         <Image url="@../images/confirme.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="voltarConfig" fitHeight="47.0" fitWidth="40.0" layoutX="25.0" layoutY="35.0" onMouseClicked="#voltarConfig" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="voltarConfig" fitHeight="47.0" fitWidth="40.0" layoutX="25.0" layoutY="35.0" onMouseClicked="#voltarConfig" pickOnBounds="true" preserveRatio="true" styleClass="config">
                      <image>
                         <Image url="@../images/back.png" />
                      </image>
                   </ImageView>
                     </children>
                 </Pane>
-            <ImageView fx:id="deletePlaylist" fitHeight="30.0" fitWidth="30.0" layoutX="1114.0" layoutY="78.0" onMouseClicked="#deletarPlaylist" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="deletePlaylist" fitHeight="30.0" fitWidth="30.0" layoutX="1114.0" layoutY="78.0" onMouseClicked="#deletarPlaylist" pickOnBounds="true" preserveRatio="true" styleClass="config">
                <image>
                   <Image url="@../images/lixeira.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="deletePlaylist1" fitHeight="30.0" fitWidth="30.0" layoutX="1154.0" layoutY="78.0" onMouseClicked="#editarPlaylist" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="deletePlaylist1" fitHeight="30.0" fitWidth="30.0" layoutX="1154.0" layoutY="78.0" onMouseClicked="#editarPlaylist" pickOnBounds="true" preserveRatio="true" styleClass="config">
                <image>
                   <Image url="@../images/lapis.png" />
                </image>
@@ -209,7 +209,7 @@
                             </font>
                         </Label>
                         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="386.0" prefHeight="53.0" prefWidth="200.0" styleClass="botaoVIP" stylesheets="@../css/principal/sidebar.css" text="CONTA VIP" />
-                  <ImageView fx:id="botaoConfig" fitHeight="46.0" fitWidth="40.0" layoutX="21.0" layoutY="23.0" onMouseClicked="#abrirConfig" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="botaoConfig" fitHeight="46.0" fitWidth="40.0" layoutX="21.0" layoutY="23.0" onMouseClicked="#abrirConfig" pickOnBounds="true" preserveRatio="true" styleClass="config">
                      <image>
                         <Image url="@../images/profile.png" />
                      </image>
@@ -238,7 +238,7 @@
                                 <Font size="21.0" />
                             </font>
                         </TextField>
-                  <ImageView fx:id="checkbox" fitHeight="30.0" fitWidth="30.0" layoutX="323.0" layoutY="11.0" onMouseClicked="#salvarEdit" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <ImageView fx:id="checkbox" fitHeight="30.0" fitWidth="30.0" layoutX="323.0" layoutY="11.0" onMouseClicked="#salvarEdit" pickOnBounds="true" preserveRatio="true" styleClass="config" visible="false">
                      <image>
                         <Image url="@../images/confirmar.png" />
                      </image>

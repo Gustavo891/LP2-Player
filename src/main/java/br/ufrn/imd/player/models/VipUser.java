@@ -14,10 +14,24 @@ import java.util.stream.Collectors;
 
 public class VipUser extends User{
 
+    /**
+     * Construtor do usuário VIP.
+     * @param username
+     * @param senha
+     * @param isVIP
+     * @param id
+     * @param userIcon
+     * @param nomeCompleto
+     * @param email
+     */
     public VipUser(String username, String senha, boolean isVIP, int id, String userIcon, String nomeCompleto, String email) {
         super(username, senha, isVIP, id, userIcon, nomeCompleto, email);
     }
-
+    /**
+     * Recebe a informação do painel de criação da playlist, verifica se o nome é válido e cria o arquivo.
+     * @param field
+     * @return
+     */
     public boolean criarPlaylist(TextField field) {
         String playlistName = field.getText();
         if (isValidPlaylistName(playlistName) && !(playlistName == "null")) {
@@ -33,6 +47,10 @@ public class VipUser extends User{
             return false;
         }
     }
+    /**
+     * Recebe o nome da playlist, e deleta ela caso exista.
+     * @param playlistName
+     */
     public void deletePlaylist(String playlistName) {
         Path playlistFilePath = Paths.get("playlists", getId() + "_" + playlistName + ".txt");
 
@@ -43,6 +61,12 @@ public class VipUser extends User{
             System.out.println("Erro ao excluir a playlist: " + playlistFilePath);
         }
     }
+    /**
+     * Recebe o caminho da música e adiciona ela no arquivo da playlist.
+     * @param selectedPlaylist
+     * @param musicPath
+     * @param playlistMusic
+     */
     public void addMusicToPlaylist(String selectedPlaylist, String musicPath, ListView playlistMusic) {
         if (selectedPlaylist != null) {
             Path playlistFilePath = Paths.get("playlists", getId() + "_" + selectedPlaylist + ".txt");
@@ -57,6 +81,11 @@ public class VipUser extends User{
             playlistMusic.refresh();
         }
     }
+    /**
+     * Carrega as músicas do arquivo da playlist.
+     * @param playlistName
+     * @param playlistMusic
+     */
     public void loadPlaylistSongs(String playlistName, ListView playlistMusic) {
         Path playlistFilePath = Paths.get("playlists", getId() + "_" + playlistName + ".txt");
 
@@ -84,6 +113,11 @@ public class VipUser extends User{
             System.out.println("Erro ao ler o arquivo da playlist: " + playlistFilePath);
         }
     }
+    /**
+     * Extrai o nome da música do arquivo da playlist.
+     * @param filePath
+     * @return
+     */
     public String extractMusicName(String filePath) {
         int lastSeparatorIndex = filePath.lastIndexOf(File.separator);
         int extensionIndex = filePath.lastIndexOf(".mp3");
@@ -94,6 +128,11 @@ public class VipUser extends User{
             return filePath;
         }
     }
+    /**
+     * Extrai o nome da playlist. De "1_teste.txt" para "teste"
+     * @param fileName
+     * @return
+     */
     public String extractPlaylistName(String fileName) {
         int underscoreIndex = fileName.indexOf('_');
         int dotIndex = fileName.lastIndexOf('.');
@@ -105,10 +144,20 @@ public class VipUser extends User{
             return null;
         }
     }
-
+    /**
+     * Verifica se o nome da playlist é válido.
+     * @param playlistName
+     * @return
+     */
     private boolean isValidPlaylistName(String playlistName) {
         return !playlistName.trim().isEmpty();
     }
+    /**
+     * Retorna o caminho da playlist.
+     * @param playlistName
+     * @param musicName
+     * @return
+     */
     public String getPlaylistMusicPath(String playlistName, String musicName) {
         String playlistFilePath = "playlists" + File.separator + getId() + "_" + playlistName + ".txt"; // Adicione a extensão do arquivo
 
@@ -126,6 +175,10 @@ public class VipUser extends User{
 
         return null;
     }
+    /**
+     * Carrega as playlists do usuário VIP.
+     * @param playlistsView
+     */
     public void loadPlaylists(MFXComboBox playlistsView) {
         File playlistFolder = new File("playlists");
         File[] playlistFiles = playlistFolder.listFiles();
@@ -145,8 +198,12 @@ public class VipUser extends User{
                     });
         }
     }
-
-
+    /**
+     * Edita a playlist do nome antigo para o novo caso esteja disponível.
+     * @param playlistNameAtual
+     * @param novoNome
+     * @return
+     */
     public boolean editarPlaylist(String playlistNameAtual, String novoNome) {
         if (isValidPlaylistName(novoNome) && !novoNome.equals("null")) {
             if (novoNome.isEmpty()) {
@@ -179,8 +236,12 @@ public class VipUser extends User{
             return false;
         }
     }
-
-
+    /**
+     * Remove a música de uma playlist.
+     * @param playlistName
+     * @param musicName
+     * @param playlistMusic
+     */
     public void removerMusica(String playlistName, String musicName, ListView playlistMusic) {
         Path playlistFilePath = Paths.get("playlists", getId() + "_" + playlistName + ".txt");
 
@@ -204,6 +265,4 @@ public class VipUser extends User{
             System.out.println("Erro ao remover a música da playlist: " + playlistFilePath);
         }
     }
-
-
 }

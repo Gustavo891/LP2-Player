@@ -1,4 +1,5 @@
 package br.ufrn.imd.player.ControlAuth;
+
 import io.github.palexdev.materialfx.controls.MFXButton;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,6 +33,9 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import br.ufrn.imd.player.models.UserFree;
 
+/**
+ * Controlador para a tela de registro de usuários.
+ */
 public class RegistroControl implements Initializable {
 
     @FXML
@@ -63,6 +67,11 @@ public class RegistroControl implements Initializable {
         }
     }
 
+    /**
+     * Lê os usuários registrados a partir de um arquivo JSON.
+     *
+     * @return Lista de usuários registrados.
+     */
     protected List<UserFree> readUsersFromFile() {
         File file = new File("registros.json");
 
@@ -88,6 +97,12 @@ public class RegistroControl implements Initializable {
             return new ArrayList<>();
         }
     }
+
+    /**
+     * Escreve a lista de usuários no arquivo JSON.
+     *
+     * @param users Lista de usuários a ser gravada.
+     */
     protected void writeUsersToFile(List<UserFree> users) {
         File file = new File("registros.json");
 
@@ -106,13 +121,19 @@ public class RegistroControl implements Initializable {
         }
     }
 
+    /**
+     * Exibe um alerta na interface gráfica.
+     *
+     * @param titulo   Título do alerta.
+     * @param mensagem Mensagem do alerta.
+     * @param icon     Ícone do alerta.
+     */
     @FXML
-    protected void exibirAlerta(String titulo, String mensagem,Image icon) {
+    protected void exibirAlerta(String titulo, String mensagem, Image icon) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titulo);
         alert.setHeaderText(null);
         alert.setContentText(mensagem);
-
 
         ImageView imageView = new ImageView(icon);
         imageView.setFitWidth(120);
@@ -124,12 +145,16 @@ public class RegistroControl implements Initializable {
 
         alert.initStyle(StageStyle.UTILITY);
         alert.showAndWait();
-
-
     }
+
+    /**
+     * Registra um novo usuário.
+     *
+     * @param actionEvent Evento de ação que desencadeou o método.
+     */
     @FXML
     protected void registrarAgora(ActionEvent actionEvent) {
-        if(validar()) {
+        if (validar()) {
             boolean already_reg = false;
             List<UserFree> existingUsers = readUsersFromFile();
 
@@ -142,20 +167,19 @@ public class RegistroControl implements Initializable {
                     regEmail.getText()
             );
 
-            for(User p:existingUsers){
-                if (p.getUsername().equals(u.getUsername())){
+            for (User p : existingUsers) {
+                if (p.getUsername().equals(u.getUsername())) {
                     System.out.println("Usuário já registrado");
                     already_reg = true;
                     Image icon2 = new Image(getClass().getResourceAsStream("/images/hat3.png"));
-                    exibirAlerta("Usuário Já Cadastrado", "O usuário já está cadastrado!",icon2);
+                    exibirAlerta("Usuário Já Cadastrado", "O usuário já está cadastrado!", icon2);
                 }
-                if (already_reg){
+                if (already_reg) {
                     return;
                 }
-
             }
 
-            if(!already_reg){
+            if (!already_reg) {
                 existingUsers.add(u);
 
                 writeUsersToFile(existingUsers);
@@ -163,7 +187,7 @@ public class RegistroControl implements Initializable {
                 usuario.setText(regUsuario.getText());
                 senha.setText(regSenha.getText());
                 email.setText(regEmail.getText());
-                if(adquiriuVIP) {
+                if (adquiriuVIP) {
                     contaVIP.setVisible(true);
                 } else {
                     contaVIP.setVisible(false);
@@ -174,13 +198,19 @@ public class RegistroControl implements Initializable {
             }
 
         } else {
-            System.out.println("Algum metodo não foi registrado.");
+            System.out.println("Algum método não foi registrado.");
         }
     }
+
+    /**
+     * Valida os campos do formulário de registro.
+     *
+     * @return true se os campos são válidos, false caso contrário.
+     */
     public boolean validar() {
         int teste = 0;
-        if(regSenha.getText().isBlank() || regUsuario.getText().isBlank() || regNome.getText().isBlank() || regEmail.getText().isBlank()) {
-            // senha ta vazia
+        if (regSenha.getText().isBlank() || regUsuario.getText().isBlank() || regNome.getText().isBlank() || regEmail.getText().isBlank()) {
+            // senha está vazia
             if (regSenha.getText().isBlank()) {
                 labelSenha.setStyle("-fx-text-fill: #e70000");
                 CaixaSenha.setStyle("-fx-border-color: #e70000;");
@@ -195,7 +225,7 @@ public class RegistroControl implements Initializable {
                 teste = 1;
                 System.out.println("Senha em branco.");
             }
-            // usuario está vazio
+            // usuário está vazio
             if (regUsuario.getText().isBlank()) {
                 labelUsuario.setStyle("-fx-text-fill: #e70000");
                 CaixaUsuario.setStyle("-fx-border-color: #e70000;");
@@ -221,7 +251,7 @@ public class RegistroControl implements Initializable {
                 hideLabel2.play();
                 teste = 1;
             }
-            // nome vazio
+            // nome está vazio
             if (regNome.getText().isBlank()) {
                 labelNome.setStyle("-fx-text-fill: #e70000");
                 CaixaNome.setStyle("-fx-border-color: #e70000;");
@@ -234,7 +264,7 @@ public class RegistroControl implements Initializable {
                 hideLabel2.play();
                 teste = 1;
             }
-            // termos estão vazio
+            // termos estão vazios
             return false;
         } else {
             return true;
@@ -242,12 +272,24 @@ public class RegistroControl implements Initializable {
     }
 
     protected Scene cenaLogin;
+
+    /**
+     * Alterna para a cena de login.
+     *
+     * @param event Evento de mouse que desencadeou o método.
+     * @throws IOException Exceção de entrada/saída.
+     */
     @FXML
     protected void switchScene(MouseEvent event) throws IOException {
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.setScene(cenaLogin);
     }
 
+    /**
+     * Ativa o status VIP do usuário.
+     *
+     * @param actionEvent Evento de ação que desencadeou o método.
+     */
     public void adquirirVIP(ActionEvent actionEvent) {
         adquiriuVIP = true;
         labelVIP.setText("  O seu vip foi ativado com sucesso.");
@@ -256,18 +298,33 @@ public class RegistroControl implements Initializable {
         painelCriada.setVisible(false);
     }
 
+    /**
+     * Volta para a tela de login.
+     *
+     * @param actionEvent Evento de ação que desencadeou o método.
+     */
     public void voltar(ActionEvent actionEvent) {
         pnlLogin.setVisible(true);
         painelVIP.setVisible(false);
         painelCriada.setVisible(false);
     }
 
+    /**
+     * Abre a tela VIP.
+     *
+     * @param actionEvent Evento de ação que desencadeou o método.
+     */
     public void abrirVIP(ActionEvent actionEvent) {
         painelVIP.setVisible(true);
         painelCriada.setVisible(false);
         pnlLogin.setVisible(false);
     }
 
+    /**
+     * Volta para a tela de login.
+     *
+     * @param actionEvent Evento de ação que desencadeou o método.
+     */
     public void voltarLogin(ActionEvent actionEvent) {
         Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         currentStage.setScene(cenaLogin);

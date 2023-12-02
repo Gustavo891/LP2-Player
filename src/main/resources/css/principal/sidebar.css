@@ -24,7 +24,6 @@
 .botaoVIP {
     -fx-background-color: linear-gradient(to right, #099bf8, #dd90f6);
     -fx-font-family: "Segoe UI";
-    -fx-cursor: hand;
     -fx-font-weight: bold;
     -fx-background-radius: 30px;
     -fx-font-size: 22px;
