@@ -21,3 +21,4 @@ A forma mais fácil de utilizar é baixar nossa última release, localizar a pas
 É necessário ter `JDK 21` e `Java 8` instalado.  
 
 Você também pode clonar o source code no `IntellIJ` e executar diretamente dele.
+![](https://i.imgur.com/xiTVq1k.gif)
