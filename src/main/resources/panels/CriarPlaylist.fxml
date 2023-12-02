@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.player.ControlMain.CriadorPlaylist">
+<AnchorPane prefHeight="320.0" prefWidth="700.0" stylesheets="@../css/principal/Playlist.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.player.ControlMain.CriadorPlaylist">
     <children>
-        <VBox alignment="CENTER" prefHeight="150.0" prefWidth="300.0" spacing="10.0">
-            <Label text="Digite o nome da playlist:" />
-            <TextField fx:id="playlistNameTextField" />
-            <Button text="Criar" onAction="#createPlaylist" />
-        </VBox>
+      <Label layoutX="31.0" layoutY="73.0" prefHeight="68.0" prefWidth="345.0" styleClass="principal" stylesheets="@../css/principal/Playlist.css" text="CRIAÇÃO DE PLAYLISTS" />
+      <ImageView fitHeight="40.0" fitWidth="48.0" layoutX="31.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/music2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="81.0" layoutY="19.0" prefHeight="68.0" prefWidth="345.0" styleClass="music" stylesheets="@../css/principal/Playlist.css" text="MUSIC FX" />
+      <MFXButton layoutX="31.0" layoutY="236.0" onAction="#createPlaylist" prefHeight="46.0" prefWidth="223.0" styleClass="buttonProfile" stylesheets="@../css/principal/Playlist.css" text="CONFIRMAR">
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </MFXButton>
+      <ImageView fitHeight="24.0" fitWidth="39.0" layoutX="192.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/confirmar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="235.0" fitWidth="238.0" layoutX="426.0" layoutY="48.0">
+         <image>
+            <Image url="@../images/cantor.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="playlistNameTextField" layoutX="30.0" layoutY="166.0" prefHeight="46.0" prefWidth="336.0" styleClass="caixa" stylesheets="@../css/principal/Playlist.css" />
+      <Label layoutX="31.0" layoutY="141.0" prefHeight="24.0" prefWidth="195.0" styleClass="texto" stylesheets="@../css/principal/Playlist.css" text="Digite o nome da playlist:" />
     </children>
 </AnchorPane>

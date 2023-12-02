@@ -12,9 +12,7 @@
 }
 
 .Stack1 {
-    -fx-border-radius: 0px 0px 30px 30px;
     -fx-border-color: #cecdcd;
-    -fx-background-radius: 0px 0px 30px 30px;
     -fx-background-color: rgb(255, 255, 255);
 }
 

@@ -22,7 +22,7 @@
 
 <AnchorPane fx:id="painelPlayer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #eeeded;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.player.ControlMain.PremiumControl">
     <children>
-        <Pane fx:id="painelPlayer3" layoutX="-1.0" layoutY="714.0" prefHeight="88.0" prefWidth="1406.0" styleClass="barraPlay" stylesheets="@../css/principal/barraplay.css">
+        <Pane fx:id="painelPlayer3" layoutX="-1.0" layoutY="721.0" prefHeight="81.0" prefWidth="1406.0" styleClass="barraPlay" stylesheets="@../css/principal/barraplay.css">
             <children>
                 <HBox fx:id="musicPause" alignment="CENTER" layoutX="76.0" layoutY="15.0" prefHeight="53.0" prefWidth="145.0" spacing="20.0" style="-fx-background-color: #eeeded;" stylesheets="@../css/principal/barraplay.css">
                     <children>

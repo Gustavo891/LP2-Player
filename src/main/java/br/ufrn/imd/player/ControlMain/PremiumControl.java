@@ -644,9 +644,12 @@ public class PremiumControl {
             dialogStage.initOwner(((Node) event.getSource()).getScene().getWindow());
             controller.setDialogStage(dialogStage);
 
+            Image appIcon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/icon.png")));
+            dialogStage.getIcons().add(appIcon);
+
             Scene scene = new Scene(root);
             dialogStage.setScene(scene);
-            dialogStage.setTitle("Criar Playlist");
+            dialogStage.setTitle("MusicFX - Crie sua playlist!");
             dialogStage.showAndWait();
             usuarioLogado.loadPlaylists(testePlaylist);
         } catch (IOException e) {

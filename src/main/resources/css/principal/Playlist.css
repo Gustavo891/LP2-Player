@@ -1,0 +1,49 @@
+.principal {
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-weight: 700;
+    -fx-text-fill: rgb(51, 51, 51);
+    -fx-font-size: 30px;
+}
+.texto {
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-weight: 500;
+    -fx-text-fill: rgb(51, 51, 51);
+    -fx-font-size: 15px;
+}
+.music {
+    -fx-font: 30px 'Open Sans', sans-serif;
+    -fx-font-weight: 700;
+    -fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #099bf8 0.0%, #dd90f6 100.0%);
+}
+.caixa {
+    -fx-border-color: black;
+    -fx-text-fill: rgb(128, 128, 128);
+    -fx-font-size: 13px;
+    -fx-border-style: solid;
+}
+.caixa:selected {
+    -fx-border-color: black;
+    -fx-text-fill: rgb(128, 128, 128);
+    -fx-font-size: 13px;
+    -fx-border-style: solid;
+}
+.caixa:focused {
+    -fx-border-color: black;
+    -fx-text-fill: rgb(128, 128, 128);
+    -fx-font-size: 13px;
+    -fx-border-style: solid;
+}
+.buttonProfile {
+    -fx-background-color: linear-gradient(to right, #099bf8, #dd90f6);
+    -fx-font-family: "Segoe UI";
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #fdfdfd;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0); /* Adiciona sombra */
+}
+
+.buttonProfile:hover {
+    -fx-background-color: linear-gradient(to right, #099bf8, #dd90f6);
+    -fx-cursor: hand;
+}
