@@ -10,6 +10,14 @@ O MusicFX é um player de media mp3, feito em Java usando JavaFX.
 ## 🤔 Como funciona?
 </p>É bastante simples, você pode cadastrar sua conta, ela tanto sendo VIP, ou usuário normal. O benefício do VIP em relação ao comum, é a criação de playlists. Para adicionar músicas para tocar, você clica no botão de adicionar diretório, em seguida seleciona a pasta que contem suas músicas, assim elas irão aparecer na aplicação. Você pode criar playlists com nomes personalizados, edita-las, e deleta-las. Para adicionar uma música a playlist, basta arrastar ela do diretório até a área das playlists, e caso queira deletar a música da playlist, basta seleciona-la e clicar com o "delete" do teclado.
 
+### Registro - Como fazer:
+![](https://i.imgur.com/HCg2AIf.gif)
+
+### Login - Como fazer:
+![](https://i.imgur.com/YIdOBXE.gif)
+
+### Funcionamento 1 - Conta Free:
+![](https://i.imgur.com/ysT5Wyf.gif)
 
 ## 💻 Como utilizar?
 
