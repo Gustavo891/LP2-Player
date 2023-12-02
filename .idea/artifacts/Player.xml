@@ -1,0 +1,118 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Player">
+    <output-path>$PROJECT_DIR$/out/artifacts/Player</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="br.ufrn.imd.player.main.Start" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Player.jar">
+        <element id="module-output" name="Player" />
+      </element>
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:win:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:21" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.7" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.7" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.7.1" />
+      <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.9" />
+      <element id="library" level="project" name="Maven: de.jensd:fontawesomefx:8.2" />
+      <element id="library" level="project" name="Maven: io.github.palexdev:materialfx:11.17.0" />
+      <element id="library" level="project" name="Maven: io.github.palexdev:mfxcore:11.8.0" />
+      <element id="library" level="project" name="Maven: io.github.palexdev:mfxeffects:11.3.0" />
+      <element id="library" level="project" name="Maven: io.github.palexdev:mfxlocalization:11.1.0" />
+      <element id="library" level="project" name="Maven: io.github.palexdev:mfxresources:11.9.1" />
+      <element id="library" level="project" name="Maven: io.github.palexdev:virtualizedfx:11.9.6" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:21" />
+      <element id="library" level="project" name="Maven: org.apiguardian:apiguardian-api:1.1.2" />
+      <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.2" />
+      <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.9.2" />
+      <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.9.2" />
+      <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-engine:1.9.2" />
+      <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.2.0" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/javafx-swt.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/fontawesomefx-8.9.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/AnimateFX-1.2.3.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/javafx.base.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/javafx.controls.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/javafx.fxml.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/javafx.graphics.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/javafx.media.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/javafx.properties" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/javafx.swing.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/javafx.web.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-console-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-console-l1-2-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-datetime-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-debug-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-errorhandling-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-file-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-file-l1-2-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-file-l2-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-handle-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-heap-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-interlocked-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-libraryloader-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-localization-l1-2-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-memory-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-namedpipe-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-processenvironment-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-processthreads-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-processthreads-l1-1-1.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-profile-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-string-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-synch-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-synch-l1-2-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-sysinfo-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-timezone-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-core-util-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-conio-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-convert-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-environment-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-filesystem-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-heap-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-locale-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-math-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-multibyte-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-private-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-process-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-runtime-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-stdio-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-string-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-time-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/api-ms-win-crt-utility-l1-1-0.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/decora_sse.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/fxplugins.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/glass.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/glib-lite.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/gstreamer-lite.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/javafx_font.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/javafx_iio.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/jfxmedia.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/jfxwebkit.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/msvcp140.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/msvcp140_1.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/msvcp140_2.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/Player-1.0-SNAPSHOT-shaded.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/prism_common.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/prism_d3d.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/prism_sw.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/ucrtbase.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/vcruntime140.dll" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/javafx-sdk-21.0.1/bin/vcruntime140_1.dll" />
+    </root>
+  </artifact>
+</component>

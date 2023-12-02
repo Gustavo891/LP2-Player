@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
@@ -13,16 +12,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="background" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.player.ControlAuth.RegistroControl">
     <children>
         <Pane layoutX="54.0" layoutY="45.0" prefHeight="694.0" prefWidth="772.0" styleClass="loginPainel" stylesheets="@../css/login.css">
             <children>
-                <Pane fx:id="painelVIP" prefHeight="694.0" prefWidth="745.0" stylesheets="@../css/login.css" visible="false">
+                <Pane fx:id="painelVIP" prefHeight="694.0" prefWidth="745.0" stylesheets="@../css/login.css">
                     <children>
                         <Pane prefHeight="694.0" prefWidth="756.0" styleClass="background" stylesheets="@../css/login.css">
                             <children>
@@ -32,25 +28,7 @@
                                         <String fx:value="botao" />
                                     </styleClass></MFXButton>
                                 <Label layoutX="76.0" layoutY="190.0" prefHeight="56.0" prefWidth="518.0" styleClass="criar" stylesheets="@../css/login.css" text="PROCESSO CONTA VIP" />
-                                <FontAwesomeIcon glyphName="MUSIC" layoutX="76.0" layoutY="179.0" size="30px">
-                                    <fill>
-                                        <LinearGradient endX="1.0" endY="1.0">
-                                            <stops>
-                                                <Stop>
-                                                    <color>
-                                                        <Color red="0.03529411926865578" green="0.6078431606292725" blue="0.9725490212440491" />
-                                                    </color>
-                                                </Stop>
-                                                <Stop offset="1.0">
-                                                    <color>
-                                                        <Color red="0.8666666746139526" green="0.5647059082984924" blue="0.9647058844566345" />
-                                                    </color>
-                                                </Stop>
-                                            </stops>
-                                        </LinearGradient>
-                                    </fill>
-                                </FontAwesomeIcon>
-                                <Label layoutX="110.0" layoutY="140.0" prefHeight="56.0" prefWidth="378.0" styleClass="titulo" stylesheets="@../css/login.css" text="MusicFX" />
+                                <Label layoutX="118.0" layoutY="140.0" prefHeight="56.0" prefWidth="378.0" styleClass="titulo" stylesheets="@../css/login.css" text="MusicFX" />
                                 <VBox layoutX="76.0" layoutY="247.0" prefHeight="83.0" prefWidth="416.0" spacing="30.0">
                                     <children>
                                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="valor" text="A conta vip vem com alguns benefícios que a conta normal não tem, como principal, você pode criar ilimitadas playlists e gerenciar suas músicas dentro dela." textAlignment="JUSTIFY" wrappingWidth="522.13671875" />
@@ -66,8 +44,120 @@
                                         <String fx:value="voltar" />
                                         <String fx:value="botao" />
                                     </styleClass></MFXButton>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="76.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/music2.png" />
+                           </image>
+                        </ImageView>
                             </children>
                         </Pane>
+                    </children>
+                </Pane>
+                <Pane fx:id="pnlLogin" layoutX="13.0" prefHeight="694.0" prefWidth="756.0" stylesheets="@../css/login.css" visible="false">
+                    <children>
+                        <VBox layoutX="84.0" layoutY="159.0" prefHeight="379.0" prefWidth="605.0">
+                            <children>
+                                <Label fx:id="labelNome" styleClass="texto3" stylesheets="@../css/login.css" text="Digite seu nome completo:" />
+                                <HBox fx:id="CaixaNome" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
+                                    <children>
+                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/info.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                        </Pane>
+                                        <TextField fx:id="regNome" focusTraversable="false" prefHeight="45.0" prefWidth="307.0" promptText="Exemplo: Peter Gene Hernandez" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="labelEmail" styleClass="texto3" stylesheets="@../css/login.css" text="Digite o seu email:" />
+                                <HBox fx:id="CaixaEmail" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
+                                    <children>
+                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/email.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                        </Pane>
+                                        <TextField fx:id="regEmail" focusTraversable="false" prefHeight="45.0" prefWidth="307.0" promptText="Exemplo: bruninho2022@gmail.com" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="labelUsuario" styleClass="texto3" stylesheets="@../css/login.css" text="Digite seu nome de usuário:" />
+                                <HBox fx:id="CaixaUsuario" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
+                                    <children>
+                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/user.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                        </Pane>
+                                        <TextField fx:id="regUsuario" focusTraversable="false" prefHeight="45.0" prefWidth="307.0" promptText="Exemplo: BrunoMars" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="labelSenha" prefHeight="20.0" prefWidth="104.0" styleClass="texto3" stylesheets="@../css/login.css" text="Digite sua senha:" />
+                                <HBox fx:id="CaixaSenha" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
+                                    <children>
+                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/password.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                        </Pane>
+                                        <PasswordField fx:id="regSenha" focusTraversable="false" prefHeight="43.0" prefWidth="310.0" promptText="Exemplo: BruninhoFromBrazil" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="25.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="605.0" stylesheets="@../css/login.css">
+                                    <children>
+                                        <MFXButton fx:id="botaoAdquirir" buttonType="RAISED" onAction="#abrirVIP" prefHeight="45.0" prefWidth="239.0" rippleAnimateBackground="false" stylesheets="@../css/login.css" text="ADQUIRIR VIP">
+                                            <styleClass>
+                                                <String fx:value="botaoVIP" />
+                                                <String fx:value="botao" />
+                                            </styleClass></MFXButton>
+                                        <Label fx:id="labelVIP" prefHeight="33.0" prefWidth="364.0" styleClass="ativado" stylesheets="@../css/login.css" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <MFXButton fx:id="botaoRegistrar" buttonType="RAISED" layoutX="214.0" layoutY="598.0" onAction="#registrarAgora" prefHeight="45.0" prefWidth="330.0" rippleAnimateBackground="false" stylesheets="@../css/login.css" text="Criar minha conta!">
+                            <styleClass>
+                                <String fx:value="botaoAcessar" />
+                                <String fx:value="botao" />
+                            </styleClass></MFXButton>
+                        <Label fx:id="goLogin" layoutX="462.0" layoutY="52.0" onMouseClicked="#switchScene" stylesheets="@../css/login.css" text="Já tem uma conta? Acesse agora!" textFill="#69cdee" underline="true">
+                            <styleClass>
+                                <String fx:value="registre" />
+                                <String fx:value="textohover" />
+                            </styleClass></Label>
+                        <Label layoutX="84.0" layoutY="84.0" prefHeight="56.0" prefWidth="518.0" styleClass="criar" stylesheets="@../css/login.css" text="Registre sua conta agora!" />
+                        <Label layoutX="127.0" layoutY="34.0" prefHeight="56.0" prefWidth="378.0" styleClass="titulo" stylesheets="@../css/login.css" text="MusicFX" />
+                  <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="82.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/music2.png" />
+                     </image>
+                  </ImageView>
                     </children>
                 </Pane>
                 <Pane fx:id="painelCriada" prefHeight="694.0" prefWidth="772.0" visible="false">
@@ -78,24 +168,6 @@
                                 <String fx:value="botao" />
                             </styleClass>
                         </MFXButton>
-                        <FontAwesomeIcon glyphName="MUSIC" layoutX="90.0" layoutY="155.0" size="30px">
-                            <fill>
-                                <LinearGradient endX="1.0" endY="1.0">
-                                    <stops>
-                                        <Stop>
-                                            <color>
-                                                <Color red="0.03529411926865578" green="0.6078431606292725" blue="0.9725490212440491" />
-                                            </color>
-                                        </Stop>
-                                        <Stop offset="1.0">
-                                            <color>
-                                                <Color red="0.8666666746139526" green="0.5647059082984924" blue="0.9647058844566345" />
-                                            </color>
-                                        </Stop>
-                                    </stops>
-                                </LinearGradient>
-                            </fill>
-                        </FontAwesomeIcon>
                         <Label layoutX="124.0" layoutY="117.0" prefHeight="56.0" prefWidth="378.0" styleClass="titulo" stylesheets="@../css/login.css" text="MusicFX" />
                         <Label layoutX="89.0" layoutY="173.0" prefHeight="47.0" prefWidth="583.0" styleClass="criar" stylesheets="@../css/login.css" text="SUA CONTA FOI CRIADA." wrapText="true" />
                         <VBox layoutX="90.0" layoutY="276.0" prefHeight="129.0" prefWidth="456.0">
@@ -127,110 +199,11 @@
                             </children>
                         </VBox>
                         <Label fx:id="contaVIP" alignment="CENTER" layoutX="89.0" layoutY="228.0" prefHeight="42.0" prefWidth="271.0" styleClass="botaoCriada" stylesheets="@../css/registrar.css" text="SUA CONTA É VIP" textAlignment="CENTER" />
-                    </children>
-                </Pane>
-                <Pane fx:id="pnlLogin" layoutX="13.0" prefHeight="694.0" prefWidth="756.0" stylesheets="@../css/login.css">
-                    <children>
-                        <VBox layoutX="84.0" layoutY="159.0" prefHeight="379.0" prefWidth="605.0">
-                            <children>
-                                <Label fx:id="labelNome" styleClass="texto3" stylesheets="@../css/login.css" text="Digite seu nome completo:" />
-                                <HBox fx:id="CaixaNome" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
-                                    <children>
-                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
-                                            <children>
-                                                <FontAwesomeIcon glyphName="INFO_CIRCLE" layoutX="13.0" layoutY="30.0" size="25px" />
-                                            </children>
-                                        </Pane>
-                                        <TextField fx:id="regNome" focusTraversable="false" prefHeight="45.0" prefWidth="307.0" promptText="Exemplo: Peter Gene Hernandez" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
-                                    </children>
-                                    <VBox.margin>
-                                        <Insets bottom="15.0" />
-                                    </VBox.margin>
-                                </HBox>
-                                <Label fx:id="labelEmail" styleClass="texto3" stylesheets="@../css/login.css" text="Digite o seu email:" />
-                                <HBox fx:id="CaixaEmail" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
-                                    <children>
-                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
-                                            <children>
-                                                <FontAwesomeIcon glyphName="AT" layoutX="13.0" layoutY="30.0" size="25px" />
-                                            </children>
-                                        </Pane>
-                                        <TextField fx:id="regEmail" focusTraversable="false" prefHeight="45.0" prefWidth="307.0" promptText="Exemplo: bruninho2022@gmail.com" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
-                                    </children>
-                                    <VBox.margin>
-                                        <Insets bottom="15.0" />
-                                    </VBox.margin>
-                                </HBox>
-                                <Label fx:id="labelUsuario" styleClass="texto3" stylesheets="@../css/login.css" text="Digite seu nome de usuário:" />
-                                <HBox fx:id="CaixaUsuario" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
-                                    <children>
-                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
-                                            <children>
-                                                <FontAwesomeIcon glyphName="USER" layoutX="13.0" layoutY="30.0" size="25px" />
-                                            </children>
-                                        </Pane>
-                                        <TextField fx:id="regUsuario" focusTraversable="false" prefHeight="45.0" prefWidth="307.0" promptText="Exemplo: BrunoMars" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
-                                    </children>
-                                    <VBox.margin>
-                                        <Insets bottom="15.0" />
-                                    </VBox.margin>
-                                </HBox>
-                                <Label fx:id="labelSenha" prefHeight="20.0" prefWidth="104.0" styleClass="texto3" stylesheets="@../css/login.css" text="Digite sua senha:" />
-                                <HBox fx:id="CaixaSenha" alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
-                                    <children>
-                                        <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
-                                            <children>
-                                                <FontAwesomeIcon glyphName="LOCK" layoutX="14.0" layoutY="30.0" size="25px" />
-                                            </children>
-                                        </Pane>
-                                        <PasswordField fx:id="regSenha" focusTraversable="false" prefHeight="43.0" prefWidth="310.0" promptText="Exemplo: BruninhoFromBrazil" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
-                                    </children>
-                                    <VBox.margin>
-                                        <Insets bottom="25.0" />
-                                    </VBox.margin>
-                                </HBox>
-                                <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="605.0" stylesheets="@../css/login.css">
-                                    <children>
-                                        <MFXButton fx:id="botaoAdquirir" buttonType="RAISED" onAction="#abrirVIP" prefHeight="45.0" prefWidth="239.0" rippleAnimateBackground="false" stylesheets="@../css/login.css" text="ADQUIRIR VIP">
-                                            <styleClass>
-                                                <String fx:value="botaoVIP" />
-                                                <String fx:value="botao" />
-                                            </styleClass></MFXButton>
-                                        <Label fx:id="labelVIP" prefHeight="33.0" prefWidth="364.0" styleClass="ativado" stylesheets="@../css/login.css" />
-                                    </children>
-                                </HBox>
-                            </children>
-                        </VBox>
-                        <MFXButton fx:id="botaoRegistrar" buttonType="RAISED" layoutX="214.0" layoutY="598.0" onAction="#registrarAgora" prefHeight="45.0" prefWidth="330.0" rippleAnimateBackground="false" stylesheets="@../css/login.css" text="Criar minha conta!">
-                            <styleClass>
-                                <String fx:value="botaoAcessar" />
-                                <String fx:value="botao" />
-                            </styleClass></MFXButton>
-                        <Label fx:id="goLogin" layoutX="462.0" layoutY="52.0" onMouseClicked="#switchScene" stylesheets="@../css/login.css" text="Já tem uma conta? Acesse agora!" textFill="#69cdee" underline="true">
-                            <styleClass>
-                                <String fx:value="registre" />
-                                <String fx:value="textohover" />
-                            </styleClass></Label>
-                        <Label layoutX="84.0" layoutY="84.0" prefHeight="56.0" prefWidth="518.0" styleClass="criar" stylesheets="@../css/login.css" text="Registre sua conta agora!" />
-                        <FontAwesomeIcon glyphName="MUSIC" layoutX="84.0" layoutY="73.0" size="30px">
-                            <fill>
-                                <LinearGradient endX="1.0" endY="1.0">
-                                    <stops>
-                                        <Stop>
-                                            <color>
-                                                <Color red="0.03529411926865578" green="0.6078431606292725" blue="0.9725490212440491" />
-                                            </color>
-                                        </Stop>
-                                        <Stop offset="1.0">
-                                            <color>
-                                                <Color red="0.8666666746139526" green="0.5647059082984924" blue="0.9647058844566345" />
-                                            </color>
-                                        </Stop>
-                                    </stops>
-                                </LinearGradient>
-                            </fill>
-                        </FontAwesomeIcon>
-                        <Label layoutX="118.0" layoutY="34.0" prefHeight="56.0" prefWidth="378.0" styleClass="titulo" stylesheets="@../css/login.css" text="MusicFX" />
+                  <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="80.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/music2.png" />
+                     </image>
+                  </ImageView>
                     </children>
                 </Pane>
             </children>

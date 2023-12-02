@@ -2,7 +2,6 @@ package br.ufrn.imd.player.ControlMain;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import io.github.palexdev.materialfx.controls.MFXComboBox;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -53,7 +52,7 @@ public class FreeControl {
     @FXML
     protected ProgressBar musicProgress;
     @FXML
-    protected FontAwesomeIcon botaoPlay, botaoPausar;
+    protected ImageView botaoPlay, botaoPausar;
     @FXML
     protected ImageView imagemPerfil, imagemPerfil1;
 

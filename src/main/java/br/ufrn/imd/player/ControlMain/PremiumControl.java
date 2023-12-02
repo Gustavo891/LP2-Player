@@ -9,7 +9,6 @@ import java.util.Objects;
 import br.ufrn.imd.player.models.UserFree;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import io.github.palexdev.materialfx.controls.MFXComboBox;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -64,9 +63,7 @@ public class PremiumControl {
     @FXML
     protected Pane painelPerfil, painelConfig;
     @FXML
-    protected FontAwesomeIcon botaoPlay, botaoPausar;
-    @FXML
-    protected ImageView imagemPerfil, imagemPerfil1;
+    protected ImageView imagemPerfil, imagemPerfil1, botaoPlay, botaoPausar, checkbox;
 
     protected List<String> directories = new ArrayList<>();
     protected MediaPlayer mediaPlayer;
@@ -657,8 +654,6 @@ public class PremiumControl {
 
         }
     }
-    @FXML
-    protected FontAwesomeIcon checkbox;
     @FXML
     protected TextField editTextfield;
     public void salvarEdit(MouseEvent mouseEvent) {

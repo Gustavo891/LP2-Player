@@ -6,7 +6,6 @@ module br.ufrn.imd.player {
     requires javafx.media;
     requires java.base;
     requires MaterialFX;
-    requires fontawesomefx;
 
     opens br.ufrn.imd.player.main to javafx.fxml;
     exports br.ufrn.imd.player.main;

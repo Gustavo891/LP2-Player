@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import java.lang.String?>
 <?import java.net.URL?>
@@ -14,9 +13,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="background" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.player.ControlAuth.LoginControl">
     <children>
@@ -34,9 +30,13 @@
                         <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
                             <children>
                                 <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
-                                    <children>
-                                        <FontAwesomeIcon glyphName="USER" layoutX="13.0" layoutY="30.0" size="25px" />
-                                    </children>
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/user.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
                                 </Pane>
                                 <TextField fx:id="usuario" focusTraversable="false" prefHeight="45.0" prefWidth="307.0" promptText="Exemplo: BrunoMars" style="-fx-border-color: transparent;" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
                             </children>
@@ -48,9 +48,13 @@
                         <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="250.0" spacing="10.0" styleClass="hboxLogin" stylesheets="@../css/login.css">
                             <children>
                                 <Pane prefHeight="45.0" prefWidth="45.0" style="-fx-border-width: 1px; -fx-border-color: lightgray;">
-                                    <children>
-                                        <FontAwesomeIcon glyphName="LOCK" layoutX="14.0" layoutY="30.0" size="25px" />
-                                    </children>
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/password.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
                                 </Pane>
                                 <PasswordField fx:id="password" focusTraversable="false" prefHeight="43.0" prefWidth="310.0" promptText="Exemplo: BruninhoFromBrazil" styleClass="fieldsLogin" stylesheets="@../css/login.css" />
                             </children>
@@ -71,24 +75,11 @@
                 </Label>
                 <Label layoutX="79.0" layoutY="75.0" prefHeight="56.0" prefWidth="518.0" styleClass="criar" stylesheets="@../css/login.css" text="Bem-vindo de volta!" />
                 <Label layoutX="113.0" layoutY="32.0" prefHeight="56.0" prefWidth="378.0" styleClass="titulo" stylesheets="@../css/login.css" text="MusicFX" />
-                <FontAwesomeIcon glyphName="MUSIC" layoutX="79.0" layoutY="71.0" size="30px">
-                    <fill>
-                        <LinearGradient endX="1.0" endY="1.0">
-                            <stops>
-                                <Stop>
-                                    <color>
-                                        <Color red="0.03529411926865578" green="0.6078431606292725" blue="0.9725490212440491" />
-                                    </color>
-                                </Stop>
-                                <Stop offset="1.0">
-                                    <color>
-                                        <Color red="0.8666666746139526" green="0.5647059082984924" blue="0.9647058844566345" />
-                                    </color>
-                                </Stop>
-                            </stops>
-                        </LinearGradient>
-                    </fill>
-                </FontAwesomeIcon>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="79.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/music2.png" />
+               </image>
+            </ImageView>
             </children>
          <stylesheets>
             <URL value="@../css/login.css" />
